@@ -6,7 +6,9 @@ import { subscribeToNewsletter } from "../app/actions/newsletter";
 
 export function EmailSignUpForm() {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -46,6 +48,7 @@ export function EmailSignUpForm() {
               required
               className="w-full px-4 py-3 rounded-lg border border-neutral-200 dark:border-neutral-700 focus:border-primary focus:ring-2 focus:ring-primary/20 dark:focus:ring-primary/30 transition-all duration-200 outline-none text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 dark:placeholder-neutral-500 dark:bg-neutral-700"
               placeholder="Enter your email"
+              disabled={true}
             />
           </div>
         </div>
